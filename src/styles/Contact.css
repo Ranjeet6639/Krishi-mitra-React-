@@ -43,6 +43,7 @@ nav a:hover, nav .active {
   gap: 40px;
   padding: 60px 80px;
   flex-wrap: wrap;
+  margin-top: 400px;
 }
 
 .contact-info {
@@ -118,14 +119,18 @@ button:hover {
 }
 
 /* Footer */
-footer {
+.footer {
   text-align: center;
   padding: 20px;
+  border-radius: 20px;
   background: #198754;
   color: white;
   margin-top: 40px;
 }
-
+.footer
+p{
+  color: white;
+}
 @media (max-width: 768px) {
   .contact-container {
     flex-direction: column;

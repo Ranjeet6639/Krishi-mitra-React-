@@ -100,7 +100,7 @@ function Contact() {
         </form>
       </section>
 
-      <footer>
+      <footer className="footer" >
         <p>© 2025 Krishi Mitra | All Rights Reserved</p>
       </footer>
     </>
