@@ -6,7 +6,7 @@
       --radius: 14px;
   }
   
-  body {
+  .dashboardbody {
       background:linear-gradient(90deg, rgba(42,123,155,1) 0%, rgba(87,199,133,1) 50%, rgba(237,221,83,1) 100%);
       
       font-family: "Poppins", sans-serif;
@@ -19,6 +19,7 @@
       margin: 90px auto;
       margin-left: 35px;
       margin-right: 35px;
+      margin-top: 1300px;
   
       padding: 30px;
       background: var(--card);
@@ -146,34 +147,40 @@
 /* Carousel Buttons */
 .carousel-btn {
   position: absolute;
-  top: 50%;
+  top: 45%;              /* slightly above center */
   transform: translateY(-50%);
-  background: none;
+  background: rgba(0, 0, 0, 0.5);   /* dark circle background */
   border: none;
-  color: rgb(0, 0, 0);
-  font-size: 1.8em;
+  color: #fff;           /* white arrow */
+  font-size: 20px;
   cursor: pointer;
-  padding: 6px 12px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
-  opacity: 0.7;
-  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+  z-index: 10;
 }
+
 .carousel-btn:hover {
-  opacity: 1;
+  background: rgba(0, 0, 0, 0.8);
 }
+
 .carousel-btn.prev {
-  left: 10px;
+  left: 15px;
 }
+
 .carousel-btn.next {
-  right: 10px;
+  right: 15px;
 }
 
 @media (max-width: 768px) {
-  .disease-slide img {
-    height: 220px;
-  }
   .carousel-btn {
-    font-size: 1.5em;
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
   }
 }
 

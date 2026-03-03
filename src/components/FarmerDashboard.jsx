@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import DiseaseCarousel from "./DiseaseCarousel";
+import FarmerNavbar from "./FarmerNavbar";
 import FertilizerSection from "./FertilizerSection";
 import NearbyServicesMap from "./NearbyServicesMap";
 import Chatbot from "./Chatbot";
@@ -10,9 +11,6 @@ function FarmerDashboard() {
   const [prices, setPrices] = useState([]);
   const [location, setLocation] = useState("Maharashtra");
 
-  useEffect(() => {
-    getUserLocation();
-  }, []);
 
   const fetchSeedPrices = async () => {
     setPrices([]);
@@ -62,36 +60,47 @@ function FarmerDashboard() {
       fetchSeedPrices();
     }
   };
+  useEffect(() => {
+  document.body.className = "dashboardbody";
+  getUserLocation();
+
+  return () => {
+    document.body.className = "";
+  };
+}, []);
 
   return (
-    <div className="dashboard-container">
-      <h2>🌾 Welcome to Your Dashboard</h2>
-      <div>{location}</div>
+    <>
+      <FarmerNavbar />
+      <div className="dashboard-container">
+        <h2>🌾 Welcome to Your Dashboard</h2>
+        <div>{location}</div>
 
-      <button className="refresh-btn" onClick={fetchSeedPrices}>
-        🔄 Refresh Prices
-      </button>
+        <button className="refresh-btn" onClick={fetchSeedPrices}>
+          🔄 Refresh Prices
+        </button>
 
-      <div className="price-grid">
-        {prices.length === 0 ? (
-          <p>Loading latest prices...</p>
-        ) : (
-          prices.map((item, index) => (
-            <div key={index} className="price-card">
-              <div className="crop-name">{item.crop}</div>
-              <div className="crop-price">
-                Current Price: {item.price}
+        <div className="price-grid">
+          {prices.length === 0 ? (
+            <p>Loading latest prices...</p>
+          ) : (
+            prices.map((item, index) => (
+              <div key={index} className="price-card">
+                <div className="crop-name">{item.crop}</div>
+                <div className="crop-price">
+                  Current Price: {item.price}
+                </div>
               </div>
-            </div>
-          ))
-        )}
-      </div>
+            ))
+          )}
+        </div>
 
-      <DiseaseCarousel />
-      <FertilizerSection />
-      <NearbyServicesMap />
-      <Chatbot />
-    </div>
+        <DiseaseCarousel />
+        <FertilizerSection />
+        {/* <NearbyServicesMap /> */}
+        <Chatbot />
+      </div>
+    </>
   );
 }
 

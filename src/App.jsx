@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import ScrollSection from "./components/ScrollSection";
@@ -47,9 +47,23 @@ function Home() {
 }
 
 function App() {
+  const location = useLocation();
+
+  // Routes where we DON'T want public navbar
+  const hideNavbarRoutes = [
+    "/farmer-dashboard",
+    "/my-account",
+    "/schemes",
+    "/weather",
+    "/farmer-sell-buy"
+  ];
+
+  const shouldHideNavbar = hideNavbarRoutes.includes(location.pathname);
+
   return (
     <div id="body" className="app-wrapper">
-      <Navbar />
+      
+      {!shouldHideNavbar && <Navbar />}
 
       <div className="page-content">
         <Routes>
