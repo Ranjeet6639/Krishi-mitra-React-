@@ -15,7 +15,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  margin-left: 15px;
   background: rgb(0, 128, 0);
   padding: 10px 20px;
   height: 80px;
@@ -60,20 +60,45 @@
   cursor: pointer;
 }
 
+/* MOBILE */
 @media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: green;
-    padding: 10px;
-  }
 
-  .nav-links.show {
-    display: flex;
+  .navbar {
+    position: relative;
   }
 
   .menu-toggle {
     display: block;
+    font-size: 28px;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 50%;
+    background: green;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 20px;
+    max-height: 0;               /* Hidden state */
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+  }
+
+  .nav-links.show {
+    max-height: 400px;           /* Enough height for links */
+    opacity: 1;
+  }
+
+  .nav-links a {
+    padding: 15px 0;
+    display: block;
+  }
+  .home-page {
+    padding-top: 2000px; 
   }
 }
 
