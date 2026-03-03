@@ -82,7 +82,8 @@
     flex-direction: column;
     text-align: center;
     border-radius: 20px;
-    max-height: 0;               /* Hidden state */
+    max-height: 0;
+    margin-right: 10px;               /* Hidden state */
     overflow: hidden;
     transition: max-height 0.5s ease, opacity 0.5s ease;
     opacity: 0;
@@ -98,8 +99,19 @@
     display: block;
   }
   .home-page {
-    padding-top: 2000px; 
+    padding-top: 1950px; 
   }
+   .scroll-right {
+    padding: 15px;
+    margin-bottom: 250px;
+    height: fit-content;
+    border-radius: 10px;
+  }
+
+  .scroll-image {
+    width: 85%;
+  }
+
 }
 
 /* ==== SCROLL SECTIONS ==== */
@@ -126,7 +138,6 @@
   text-align: center;
   color: white;
   background: rgba(0,128,0,0.6);
-  padding: 20px;
   border-radius: 12px;
   box-shadow: 0px 6px 15px rgba(0,0,0,0.3);
 }
@@ -142,6 +153,13 @@
 .scroll-right p {
   font-size: 1.1rem;
   line-height: 1.5;
+}
+.scroll-left,
+.scroll-left h1,
+.scroll-left h2,
+.scroll-right,
+.scroll-right p {
+  color: white;
 }
 
 /* ==== FOOTER ==== */
