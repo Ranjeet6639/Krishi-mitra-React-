@@ -1,0 +1,182 @@
+/* ===== Page Background ===== */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+}
+
+/* ===== Container ===== */
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  margin-top: 900px;
+}
+
+
+/* ===== Fieldset ===== */
+fieldset {
+  border: 2px solid #c8e6c9;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Legend */
+legend {
+  font-weight: bold;
+  color: #1b5e20;
+  padding: 0 10px;
+}
+
+/* ===== Form Layout ===== */
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.form-group {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Labels ===== */
+label {
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ===== Inputs ===== */
+input,
+select,
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+/* Focus Effect */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.4);
+}
+
+/* ===== File Upload ===== */
+input[type="file"] {
+  border: none;
+}
+
+/* ===== Button ===== */
+button {
+  background: #2e7d32;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #1b5e20;
+}
+
+/* ===== Verify Buttons ===== */
+.verify-btn {
+  margin-top: 8px;
+  width: auto;
+  padding: 6px 12px;
+  background: #0288d1;
+}
+
+.verify-btn:hover {
+  background: #01579b;
+}
+
+/* ===== Error Message ===== */
+.error {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* ===== Success Popup ===== */
+/* FORCE TRUE SCREEN CENTER */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: grid;
+  place-items: center;
+
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+
+  z-index: 999999;
+}
+
+/* Popup */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  color: #0a7a1c;
+  border: 2px solid #28a745;
+  padding: 30px 45px;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  animation: popupScale 0.4s ease forwards;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  z-index: 1000000;
+}
+
+.app-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+@keyframes popupScale {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+
+  .form-group {
+    flex: 1 1 100%;
+  }
+
+  .container {
+    margin: 15px;
+    padding: 20px;
+  }
+}
