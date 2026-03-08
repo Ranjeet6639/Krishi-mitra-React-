@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../styles/WeatherDetails.css";
-import Navbar from "./Navbar";
+import Navbar from "./FarmerNavbar";
 
 function WeatherSuggestion() {
   const API_KEY = "YOUR_OPENWEATHER_API_KEY"; // 🔴 Move to .env in production
