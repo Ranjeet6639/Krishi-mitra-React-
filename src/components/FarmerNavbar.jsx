@@ -12,7 +12,7 @@ const Navbar = () => {
       <div className={`nav-links ${show ? "show" : ""}`}>
         <Link to="/my-account">My Account</Link>
         <Link to="/weather">Weather</Link>
-        <Link to="/seller">Seller Page</Link>
+        <Link to="/farmer-sell-buy">Seller Page</Link>
         <Link to="/schemes">Schemes</Link>
         <Link to="/logout">Logout</Link>
       </div>

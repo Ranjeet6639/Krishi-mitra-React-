@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../styles/SellBuy.css";
+import Navbar from "./FarmerNavbar";
 
 function FarmerSellBuy() {
   const [listings, setListings] = useState([]);
@@ -50,17 +51,7 @@ function FarmerSellBuy() {
 
   return (
     <>
-      <button
-        onClick={resetData}
-        style={{
-          position: "fixed",
-          top: "10px",
-          right: "10px",
-          zIndex: "1000"
-        }}
-      >
-        🗑️ Reset Data (Demo)
-      </button>
+      <Navbar />
 
       <header>
         <h1>👨‍🌾 Krishi Mitra - Farmer Portal</h1>
