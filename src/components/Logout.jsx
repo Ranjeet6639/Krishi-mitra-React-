@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/Logout.css";
+import Navbar from "./FarmerNavbar";
 
 function Logout() {
   const [isLoggingOut, setIsLoggingOut] = useState(false);
@@ -23,11 +24,13 @@ function Logout() {
   };
 
   return (
-    <div className="logout-container">
-      <div className="logout-card">
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/1828/1828490.png"
-          alt="Logout Icon"
+    <>
+      <Navbar />
+      <div className="logout-container">
+        <div className="logout-card">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/1828/1828490.png"
+            alt="Logout Icon"
           className="logout-icon"
         />
 
@@ -56,7 +59,8 @@ function Logout() {
           </>
         )}
       </div>
-    </div>
+      </div>
+    </>
   );
 }
 
