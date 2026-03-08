@@ -63,7 +63,7 @@ function FarmerRegister() {
   };
 
   return (
-    <div className="container">
+    <div className="Registercontainer">
       <form onSubmit={handleSubmit}>
         
         <fieldset>
