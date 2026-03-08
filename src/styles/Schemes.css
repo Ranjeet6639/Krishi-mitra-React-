@@ -30,7 +30,7 @@ body {
   justify-content:center;
   gap:12px;
   flex-wrap:wrap;
-  margin-bottom:25px;
+  margin-top: 270px;
 }
 .filter-bar select, .filter-bar input {
   padding:10px 14px;

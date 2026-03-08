@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from "react";
 import "../styles/Schemes.css";
-import Navbar from "./Navbar";
+import Navbar from "./FarmerNavbar";
 
 function Schemes() {
   const schemes = [
